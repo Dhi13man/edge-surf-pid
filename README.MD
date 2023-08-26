@@ -29,7 +29,11 @@ To use the Edge Surf bot, simply add the central surfer character's position in 
 python __main__.py
 ```
 
-This will launch the bot and start playing the game automatically. The bot uses simple color detection to detect the color of the next platform and then moves the surfer in the corresponding direction. The bot also uses a PID controller to control the extent of the surfer's movement.
+This will launch the bot and start playing the game automatically once its on screen at edge://surf/.
+
+## How it Works
+
+The bot uses simple color detection to detect the color of the next platform and then moves the surfer in the corresponding direction. The bot also uses a PID controller to control the extent of the surfer's movement.
 
 By default, the bot will display a live feed of the game as it plays. You can disable this by setting the `SHOULD_SHOW_LIVE_FEED` variable to `False` in the `__main__.py` file.
 
