@@ -1,0 +1,6 @@
+# PIP Requirements.txt
+opencv-python=4.8.0.76
+mss=9.0.1
+numpy=1.25.2
+pynput=1.7.6
+simple-pid=2.0.0
