@@ -11,7 +11,11 @@ from numpy import array, ndarray, arange, newaxis, sum as np_sum
 from simple_pid import PID
 from pynput.keyboard import Controller, Key
 
-from src.utilities.opencv_utils import color_mask_out, get_bottom_parts, show_frame
+from src.utilities.opencv_utils import (
+    color_range_mask_out,
+    get_bottom_parts,
+    show_frame,
+)
 
 SHOULD_SHOW_LIVE_FEED: bool = True
 LIVE_FEED_WINDOW_NAME: str = "Live Feed" if SHOULD_SHOW_LIVE_FEED else None
@@ -73,7 +77,9 @@ if __name__ == "__main__":
         haystack_image: ndarray = cv2.cvtColor(array(img), cv2.COLOR_RGB2BGR)
 
         # Perform color masking and get the bottom parts of the window
-        haystack_image_masked: ndarray = color_mask_out(haystack_image, LIGHT_BLUE)
+        haystack_image_masked: ndarray = color_range_mask_out(
+            haystack_image, LIGHT_BLUE, WHITE
+        )
         image_left_bottom, image_right_bottom = get_bottom_parts(
             haystack_image_masked,
             LEFT_BOTTOM_WINDOW_RECT,

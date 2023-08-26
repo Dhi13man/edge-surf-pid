@@ -7,10 +7,9 @@ from mss import mss
 from mss.screenshot import ScreenShot
 from numpy import ndarray
 
-from src.needle_haystack_algorithm import NeedleHaystackAlgorithm
-from utilities.opencv_utils import show_frame, mark_rectangles, array
+from needle_haystack_algorithm import NeedleHaystackAlgorithm
 
-NEEDLE_FILE_PATH: str = "./assets/images/needles/image.png"
+NEEDLE_FILE_PATH: str = "../../assets/images/needles/image.png"
 MATCH_THRESHOLD: float = 0.025
 
 SHOULD_SHOW_LIVE_FEED: bool = True
