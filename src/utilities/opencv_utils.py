@@ -24,31 +24,6 @@ def show_frame(
     cv2.imshow(frame_window_name, resized_frame)
 
 
-def mark_rectangles(
-    width: float,
-    height: float,
-    location_list: list[tuple[int, int]],
-    image: cv2.Mat,
-    match_line_color: tuple[int, int, int] = (0, 0, 255),
-    match_line_type: int = cv2.LINE_4,
-) -> cv2.Mat:
-    """
-    Draw a circle around the needle in the haystack.
-    """
-
-    marked_image: cv2.Mat = image.copy()
-    for loc in location_list:
-        # Determine the box positions
-        top_left: tuple[int, int] = loc
-        bottom_right: tuple[int, int] = (top_left[0] + width, top_left[1] + height)
-
-        # Draw the box
-        marked_image: cv2.Mat = cv2.rectangle(
-            marked_image, top_left, bottom_right, match_line_color, match_line_type
-        )
-    return marked_image
-
-
 def color_range_mask_out(
     image: ndarray,
     color_low: tuple[int, int, int],
