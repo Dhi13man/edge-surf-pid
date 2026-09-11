@@ -41,3 +41,7 @@ By default, the bot will display a live feed of the game as it plays. You can di
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](https://raw.githubusercontent.com/Dhi13man/edge-surf-pid/main/LICENSE) file for more information.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
